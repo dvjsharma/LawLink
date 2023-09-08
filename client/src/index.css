@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
+  font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -17,16 +20,13 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%; */
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.black{
+  color: #12151b;
+}
+.white{
+  color: #f7f8f9;
 }
 
-a:hover {
-  color: #535bf2;
-}
 
 body {
   margin: 0;
