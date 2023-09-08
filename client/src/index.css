@@ -40,8 +40,7 @@ body {
   flex-wrap: wrap;
   background-color: #12151b;
   color: whitesmoke;
-  padding-left: 40px;
-  padding-bottom: 50px;
+  padding:100px;
 }
 
 .des {

@@ -4,7 +4,7 @@ import "../../index.css";
 
 const Hero = () => {
     return (
-        <div className="str">
+        <div className="str ">
             <div>
                 <h1 className="top1">Need something done?</h1>
             </div>
@@ -16,28 +16,28 @@ const Hero = () => {
                     <div className="item">
                         <h1 className="head">cbjwbjhwjw</h1>
                         <br />
-                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum, facilis consequuntur beatae provident quod blanditiis dicta laboriosam quaerat. Dolores dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum, facilis consequuntur beataeTemporibus id voluptas laboriosam dolores sit?</h3>
                     </div>
                 </div>
                 <div>
                     <div className="item">
                     <h1 className="head">cbjwbjhwjw</h1>
                     <br />
-                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum, facilis consequuntur beatae provident quod blanditiis dicta laboriosam quaerat. Dolores dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum, laboriosam quaerat. Dolores dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
                     </div>
                 </div>
                 <div>
                     <div className="item">
                     <h1 className="head">cbjwbjhwjw</h1>
                     <br />
-                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum, facilis consequuntur beatae provident quod blanditiis dicta laboriosam quaerat. Dolores dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum,dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
                     </div>
                 </div>
                 <div>
                     <div className="item">
                     <h1 className="head">cbjwbjhwjw</h1>
                     <br />
-                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum, facilis consequuntur beatae provident quod blanditiis dicta laboriosam quaerat. Dolores dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
+                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit labot dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
                     </div>
                 </div>
             </div>
