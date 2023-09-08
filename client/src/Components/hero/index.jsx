@@ -33,13 +33,7 @@ const Hero = () => {
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit laborum,dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
                     </div>
                 </div>
-                <div>
-                    <div className="item">
-                    <h1 className="head">cbjwbjhwjw</h1>
-                    <br />
-                    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sit labot dolorem delectus accusantium. Temporibus id voluptas laboriosam dolores sit?</h3>
-                    </div>
-                </div>
+                
             </div>
         </div>
         // <h1 className="hero1">Yea workinggg</h1>
