@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 const Login = () => {
     return(
     <>
@@ -59,6 +59,8 @@ const Login = () => {
       <p className="text-center text-sm text-gray-500 font-light">
         Or sign in with credentials
       </p>
+
+
       <form className="mt-6">
         <div className="relative">
           <input
@@ -103,6 +105,7 @@ const Login = () => {
             </svg>
           </div>
         </div>
+
         <div className="mt-4 flex items-center text-gray-500">
           <input type="checkbox" id="remember" name="remember" className="mr-3" />
           <label htmlFor="remember">Remember me</label>
@@ -114,8 +117,17 @@ const Login = () => {
             Sign in
           </button>
         </div>
+        <hr className="m-4"/>
+        <div className="flex items-center justify-center mt-5">
+        <span className=" text-gray-500">DO NOT HAVE A ACCOUNT ?!</span>  <Link to="/Register"
+            className="text-white py-2 px-4 ml-3 uppercase rounded bg-green-400 hover:bg-green-500 shadow hover:shadow-lg font-medium transition transform  "
+          >
+            REGISTER
+          </Link> 
+    </div>
       </form>
     </div>
+    
   </div>
 </div>
 </>
