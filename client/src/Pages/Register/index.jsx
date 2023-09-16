@@ -1,6 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import toast from 'react-hot-toast';
+import axios from 'axios';
 const Register=()=>{
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [usertype, setUserType] = useState('');
+  const registerf = async (e) => {
+    e.preventDefault();
+    try{
+  
+      const { data }= await axios.post('http://localhost:4000/users/register', 
+      {
+        email,
+        password,
+        name,
+        usertype
+      },
+      {
+        headers:{
+          "Content-Type": "application/json",
+          
+        },
+        withCredentials: true,
+      });
+      toast(data.message);
+      return <Navigate replace to="/dashboard" />
+    }
+    catch (error){
+      toast.error(error.response.data.message);
+      console.error(error);
+    }
+  }
     return(
     <>
 
@@ -21,6 +53,7 @@ const Register=()=>{
             type="text"
             placeholder="Name"
             name="name"
+            onChange={(e) => {setName(e.target.value);}}
           />
               <div className="absolute left-0 inset-y-0 flex items-center">
             <svg
@@ -47,6 +80,7 @@ const Register=()=>{
                 type="text"
                 placeholder="Email"
                 name="email"
+                onChange={(e) => {setEmail(e.target.value);}}
               />
               <div className="absolute left-0 inset-y-0 flex items-center">
                 <svg
@@ -71,6 +105,7 @@ const Register=()=>{
                 type="text"
                 placeholder="Password"
                 name="password"
+                onChange={(e) => {setPassword(e.target.value);}}
               />
               <div className="absolute left-0 inset-y-0 flex items-center">
                 <svg
@@ -98,7 +133,7 @@ const Register=()=>{
                 placeholder="LAWYER"
                 name="client_type"
                 value="lawyer"
-                
+                onChange={(e) => {setUserType(e.target.value);}}
               />
               <label className="p-3 text-gray-600 leading-tight focus:outline-none focus:ring-blue-600 focus:shadow-outline"
                  htmlFor="lawyer" >LAWYER</label>
@@ -127,6 +162,9 @@ const Register=()=>{
             <div className="flex items-center justify-center mt-8">
               <button
                 className="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
+                onClick={(e) => {
+                  registerf(e);
+                }}
               >
                 Sign in
               </button>

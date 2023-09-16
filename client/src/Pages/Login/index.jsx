@@ -1,6 +1,36 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import { React, useState } from 'react';
+import {Link, Navigate} from 'react-router-dom';
+import axios from 'axios';
+import toast from 'react-hot-toast'
+
+
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const loginf = async (e, email, password) => {
+    e.preventDefault();
+    try{
+  
+      const { data }= await axios.post('http://localhost:4000/users/login', 
+      {
+        email,
+        password
+      },
+      {
+        headers:{
+          "Content-Type": "application/json",
+          
+        },
+        withCredentials: true,
+      });
+      toast(data.message);
+      return <Navigate replace to="/dashboard" />
+    }
+    catch (error){
+      toast.error(error.response.data.message);
+      console.error(error);
+    }
+  }
     return(
     <>
 
@@ -93,6 +123,7 @@ const Login = () => {
             type="text"
             placeholder="Email"
             name="email"
+            onChange={(e)=>setEmail(e.target.value)}
           />
           <div className="absolute left-0 inset-y-0 flex items-center">
             <svg
@@ -117,6 +148,7 @@ const Login = () => {
             type="text"
             placeholder="Password"
             name="password"
+            onChange={(e)=>{setPassword(e.target.value); console.log(password);}}
           />
           <div className="absolute left-0 inset-y-0 flex items-center">
             <svg
@@ -139,6 +171,7 @@ const Login = () => {
         <div className="flex items-center justify-center mt-8">
           <button
             className="text-white py-2 px-4 uppercase rounded bg-indigo-500 hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
+            onClick={(e) => {loginf(e, email, password)}}
           >
             Sign in
           </button>

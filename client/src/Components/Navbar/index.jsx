@@ -18,8 +18,8 @@ const Navbar=()=>{
             <Link to="/">About</Link>
           </div>
           <div className="flex items-center justify-center w-[20%] gap-x-20">
-            <Link to="/">Login</Link>
-            <Link to="/">Sign up</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Sign up</Link>
             
           </div>
         </div>
