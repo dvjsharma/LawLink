@@ -30,21 +30,27 @@ const login = async (req, res) => {
     {
         return res.status(404).json({
             success: false,
-            message: "Invalid Email or Password."
+            message: "Invalid Email."
         });
     }
 
-    const isMatch = bcrypt.compare(password, user.password);
-
+    const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch)
     {
         return res.status(404).json({
             success: false,
-            message: "Invalid Email or Password."
+            message: "Invalid Password."
         });
     }
 
     sendCookie(user, res, `Welcome back, ${user.name}`, 200);
 }
 
-export { login, register};
+const getMyProfile = (req, res) => {
+    res.status(200).json({
+        message: "Success",
+        user: req.user,
+    });
+}
+
+export { login, register, getMyProfile};
