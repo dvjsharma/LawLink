@@ -7,6 +7,7 @@ import toast from 'react-hot-toast'
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [authenticated, setAuthenticated] =useState(false);
   const loginf = async (e, email, password) => {
     e.preventDefault();
     try{
@@ -24,13 +25,16 @@ const Login = () => {
         withCredentials: true,
       });
       toast(data.message);
-      return <Navigate replace to="/dashboard" />
+      setAuthenticated(true);
     }
     catch (error){
       toast.error(error.response.data.message);
       console.error(error);
     }
   }
+if (authenticated){
+  return <Navigate replace to="/dashboard" />
+}
     return(
     <>
 

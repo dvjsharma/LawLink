@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 const Register=()=>{
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [usertype, setUserType] = useState('');
+  const [resgistered, setRegistered] = useState(false);
   const registerf = async (e) => {
     e.preventDefault();
     try{
@@ -26,12 +28,16 @@ const Register=()=>{
         withCredentials: true,
       });
       toast(data.message);
-      return <Navigate replace to="/dashboard" />
+      setRegistered(true);
     }
     catch (error){
       toast.error(error.response.data.message);
       console.error(error);
     }
+  }
+  if (resgistered)
+  {
+    return <Navigate replace to="/login" />
   }
     return(
     <>
