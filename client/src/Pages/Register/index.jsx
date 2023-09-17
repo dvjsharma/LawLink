@@ -172,7 +172,7 @@ const Register=()=>{
                   registerf(e);
                 }}
               >
-                Sign in
+                Sign Up
               </button>
             </div>
             <hr className="m-4"/>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner=()=>{
     return (
-        <div className="flex  w-full bg-black pl-[10vw] flex-col text-[#f7f8f9] py-10">
+        <div className="flex  w-full bg-[url('/supremec.jpg')] bg-opacity-0 bg-center-top bg-no-repeat bg-[length:100vw_60vh]  pl-[10vw] flex-col text-[#f7f8f9] py-10">
                 <div className="flex text-left text-[48px] font-[650] flex-col mb-4 w-[80%]">
                     Hire the best <br /> lawyers for any case <br /> Online.
                 </div>

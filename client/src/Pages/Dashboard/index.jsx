@@ -40,8 +40,8 @@ const Dashboard =()=>{
 
       
       <div className="fixed w-full flex items-center justify-between h-14 text-white z-10">
-        <div className="flex items-center justify-start md:justify-center pl-3 w-14 md:w-64 h-14 bg-blue-800 dark:bg-gray-800 border-none">
-          <p className="text-white">{user.name}</p>
+        <div className="flex items-center justify-start uppercase md:justify-center pl-3 w-14 md:w-64 h-14 bg-blue-800 dark:bg-gray-800 border-none">
+          <p className="text-white uppercase">{user.name}</p>
         </div>
         <div className="flex justify-between items-center h-14 bg-blue-800 dark:bg-gray-800 header-right">
           <div className="bg-white rounded flex items-center w-full max-w-xl mr-4 p-2 shadow-sm border border-gray-200">
